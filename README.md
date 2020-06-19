@@ -14,11 +14,14 @@ See the [Wikipedia page on RPN][wiki-reverse-polish-notation]. We'll also explai
 
 ## Contents <!-- omit in toc -->
 
-- [Learning Goals](#learning-goals)
-- [Evaluating Arithmetical Expressions](#evaluating-arithmetical-expressions)
-  - [Examples Of RPN And Infix Expressions](#examples-of-rpn-and-infix-expressions)
-  - [An Advantage of RPN](#an-advantage-of-rpn)
-- [[Optional] Design Exercise: Notation](#optional-design-exercise-notation)
+- [Learning Goals](#Learning-Goals)
+- [Iterations](#Iterations)
+  - [[v1] Evaluting RPN](#v1-Evaluting-RPN)
+  - [[v2] User Input](#v2-User-Input)
+- [Evaluating Arithmetical Expressions](#Evaluating-Arithmetical-Expressions)
+  - [Examples Of RPN And Infix Expressions](#Examples-Of-RPN-And-Infix-Expressions)
+  - [An Advantage of RPN](#An-Advantage-of-RPN)
+- [[Optional] Design Exercise: Notation](#Optional-Design-Exercise-Notation)
 
 ## Learning Goals
 
@@ -33,6 +36,44 @@ We want you to practice...
 1. Expressing familiar ideas using new notation
 1. Evaluating the pros / cons of different notational systems
 1. Implementing and using basic data structures
+
+## Iterations
+
+### [v1] Evaluting RPN
+
+Implement the `evaluateRPN` function in `evaluateRPN.js`. See [Evaluating Arithmetical Statements](#Evaluating-Arithmetical-Expressions) below for details on how to do this.
+
+Read the comments in `evaluateRPN.js`; they'll point you towards other resources.
+
+### [v2] User Input
+
+Let's make it possible for the user to send us an RPN expression. Create a file called `rpn.js` and use `require` to get access to the `evaluateRPN` function:
+
+```js
+// in rpn.js
+
+let evaluateRPN = require('./evaluateRPN');
+
+// Right now expression is a hard-coded string
+// Change it so the user can specify when they run this program.
+let expression = '5 4 + 10 *';
+let result = evaluateRPN(expression);
+
+// Feel free to change the output of the program.
+// This is just here for debugging purposes
+console.log(`Expression: ${expression}`);
+console.log(`Result:     ${result}`);
+```
+
+Now change `rpn.js` so that you can run it as follows:
+
+```console
+$ node rpn.js "9 5 * 20 +"
+65
+$
+```
+
+The string `"9 5 * 20 +"` is called a *command line argument*. You have access to any command line arguments a user supplies when running your program. See the [JavaScript Examples][gh-examples-js] for how that works.
 
 ## Evaluating Arithmetical Expressions
 
@@ -117,3 +158,4 @@ See [DESIGN.md](DESIGN.md) if you're interested in exploring this.
 [wiki-reverse-polish-notation]: https://en.wikipedia.org/wiki/Reverse_Polish_notation
 [wiki-order-of-operations]: https://en.wikipedia.org/wiki/Order_of_operations
 [youtube-opinion-man]: https://www.youtube.com/watch?v=pWdd6_ZxX8c
+[gh-examples-js]: https://github.com/jfarmer/examples-javascript
