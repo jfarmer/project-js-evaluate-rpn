@@ -18,10 +18,10 @@ See the [Wikipedia page on RPN][wiki-reverse-polish-notation]. We'll also explai
 - [Iterations](#Iterations)
   - [[v1] Evaluting RPN](#v1-Evaluting-RPN)
   - [[v2] User Input](#v2-User-Input)
+  - [[Optional] Design Exercise: Notation](#Optional-Design-Exercise-Notation)
 - [Evaluating Arithmetical Expressions](#Evaluating-Arithmetical-Expressions)
   - [Examples Of RPN And Infix Expressions](#Examples-Of-RPN-And-Infix-Expressions)
   - [An Advantage of RPN](#An-Advantage-of-RPN)
-- [[Optional] Design Exercise: Notation](#Optional-Design-Exercise-Notation)
 
 ## Learning Goals
 
@@ -74,6 +74,20 @@ $
 ```
 
 The string `"9 5 * 20 +"` is called a *command line argument*. You have access to any command line arguments a user supplies when running your program. See the [JavaScript Examples][gh-examples-js] for how that works.
+
+### [Optional] Design Exercise: Notation
+
+The three notations introduced here — prefix, infix, and postfix — are all *designed*. There's no universal answer to which one is best. Indeed, asking "Which notation is best?" probably makes as much sense as asking "Which notation is the happiest?" or "Which notation is the most flavorful?"
+
+That doesn't mean [it's all just, like, your opinion, man][youtube-opinion-man]. Each notation interacts differently with the wider environment. How those interactions play out and how that informs our design choices *is* something we can study.
+
+If we do a good job, we're likely to come to new insights around things like:
+
+- How notational systems interact with the media in which the notation is used
+- How the tools we use to express ourselves select for or against various notational systems
+- ...and more!
+
+See [DESIGN.md](DESIGN.md) if you're interested in exploring this.
 
 ## Evaluating Arithmetical Expressions
 
@@ -138,20 +152,6 @@ Compare:
 ```
 
 The order of operations is a solution to a problem we created ourselves by adopting infix notation.
-
-## [Optional] Design Exercise: Notation
-
-The three notations introduced here — prefix, infix, and postfix — are all *designed*. There's no universal answer to which one is best. Indeed, asking "Which notation is best?" probably makes as much sense as asking "Which notation is the happiest?" or "Which notation is the most flavorful?"
-
-That doesn't mean [it's all just, like, your opinion, man][youtube-opinion-man]. Each notation interacts differently with the wider environment. How those interactions play out and how that informs our design choices *is* something we can study.
-
-If we do a good job, we're likely to come to new insights around things like:
-
-- How notational systems interact with the media in which the notation is used
-- How the tools we use to express ourselves select for or against various notational systems
-- ...and more!
-
-See [DESIGN.md](DESIGN.md) if you're interested in exploring this.
 
 [wiki-tokenization]: https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization
 [wiki-parsing]: https://en.wikipedia.org/wiki/Parsing
